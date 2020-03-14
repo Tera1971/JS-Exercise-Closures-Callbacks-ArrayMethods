@@ -48,8 +48,10 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, callback) {
+  callback = (list);
+    for(let i = 0; i < list.length; i++) {
+      return list.length
 }
 
 /**
@@ -66,8 +68,9 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  callback(stringList[2]);
+
 }
 
 /**
@@ -88,8 +91,9 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(num1, num2, callback) {
+  callback(num1 + num2);
+  return(processSum)
 }
 
 /**
@@ -110,10 +114,11 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  callback(num1 * num2);
+  const processProduct = num1 * num2(num => `${num} is a big number!`);
 }
-
+console.log(1, 2);
 /**
  * ### Challenge `processDuplicateFree`
  * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
@@ -132,7 +137,8 @@ function processProduct(/* CODE HERE */) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(list, callback) {
+  callback(list)
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
 }
 
@@ -155,9 +161,13 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function lowerCaseStrings(/* code here */) {
-  /* code here */
-}
+function lowerCaseStrings(strings) {
+    let stringItems = [];
+    strings.forEach((arrItem) => {
+      stringItems.push(arrItem.toLowerCase()
+   );
+    return stringItems;
+  }
 
 /**
  * ### Challenge `isItAnApple`
@@ -174,9 +184,14 @@ function lowerCaseStrings(/* code here */) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
-}
+function isItAnApple(strings) {
+  return (strings.map((item) => {
+    if(item != 'apple'){
+      return false;
+    } else {return true;}
+        
+    }));
+console.log(isItAnApple(strings));
 
 /**
  * ### Challenge `removeApple`
@@ -194,8 +209,13 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
+function removeApple(strings) {
+  return (strings.map((item) => {
+    if(item != 'apple'){
+      return false;
+    } else {return true;}
+        
+    }));
 }
 
 /**
@@ -213,8 +233,10 @@ function removeApple(/* code here */) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(strings) {
+  stringSmash.reduce((strings, arrItem) => {
+
+  }
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -232,10 +254,11 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
-}
-
+function getFullNames(runners) {
+  const getFullNames = runners.map((runners) => {
+    return runners.names
+  }
+console.log(getFullnames(runners))
 /**
  * ### Challenge `firstNamesAllCaps`
  * 
