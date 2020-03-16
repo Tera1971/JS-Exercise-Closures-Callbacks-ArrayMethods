@@ -93,7 +93,7 @@ function processLastItem(stringList, callback) {
 */
 function processSum(num1, num2, callback) {
   callback(num1 + num2);
-  return(processSum)
+  return(processSum + `$(num) is a big number!`);
 }
 
 /**
@@ -116,7 +116,7 @@ function processSum(num1, num2, callback) {
 */
 function processProduct(num1, num2, callback) {
   callback(num1 * num2);
-  const processProduct = num1 * num2(num => `${num} is a big number!`);
+  return(processProduct + `$(num) is a big number!`);
 }
 console.log(1, 2);
 /**
@@ -184,12 +184,11 @@ function lowerCaseStrings(strings) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(strings) {
-  return (strings.map((item) => {
+ function isItAnApple(strings) {
     if(item != 'apple'){
       return false;
     } else {return true;}
-        
+    return (strings.map((item) => {  
     }));
 console.log(isItAnApple(strings));
 
@@ -210,7 +209,7 @@ console.log(isItAnApple(strings));
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function removeApple(strings) {
-  return (strings.map((item) => {
+  return (strings.filter((item) => {
     if(item != 'apple'){
       return false;
     } else {return true;}
